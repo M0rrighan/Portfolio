@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* reset page */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global */
+:root {
+  --primary_n: #7f8cff;
+  --primary_b: #6070ff;
+  --neutral_n: #344563;
+  --neutral_b: #172b4d;
+}
+
+* a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* ul li {
+  list-style-type: none;
+}
