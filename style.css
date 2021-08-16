@@ -439,7 +439,7 @@ main {
   max-width: 50rem; /* 800px */
   margin-top: 13.8255033557%;
   padding:  1.5rem; /* 24px */
-  padding-bottom: 0.6875rem; /* 11px */
+  padding-bottom: 1rem; /* 16px */
   position: relative;
   bottom: 0;
 }
@@ -450,7 +450,6 @@ form {
 }
 
 .contact_form {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
@@ -463,4 +462,8 @@ form {
   border: none;
   border-radius: 0.5rem; /* 8px */
   padding: 0.9375rem 1rem; /* 15px 16px */
+}
+
+.contact_form li:last-child {
+  margin-bottom: 1rem; /* 16px */
 }
