@@ -258,6 +258,10 @@ nav {
   margin-right: 1.5rem; /* 24px */
 }
 
+.menu {
+  display: none;
+}
+
 .logo_placeholder {
   height: 100%;
   justify-content: flex-start;
@@ -470,7 +474,7 @@ form {
 
 /* ------ Media queries ------ */
 @media only screen and (min-width: 992px) {
-  /* Backgrounds */
+  /* Media queries for Backgrounds */
   .shapes_bg {
     background-image: url("./back-img/desktop-main-bg@2x.svg");
     background-size: 90%;
@@ -481,4 +485,40 @@ form {
     background-position: center;
     background-size: 90%;
   }
+  /* Media queries for Buttons */
+  .xs-transparent_btn {
+    padding: 0.625rem 0.75rem; /* 10px 12px */
+  }
+
+  /* Media queries for Header */
+  header {
+    height: 4.5rem; /* 72px */
+    padding: 0 10.02%;
+  }
+
+  .menu_btn {
+    display: none;
+  }
+
+  .menu {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.5rem; /* 8px */
+  }
+
+  nav {
+    margin-right: 0;
+  }
+
+  nav .btn {
+    letter-spacing: 0;
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.25rem; /* 20px */
+  }
+
+
+
 }
+
+
