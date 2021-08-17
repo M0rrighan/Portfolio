@@ -121,6 +121,30 @@ body {
   font-weight: 600;
 }
 
+.contact_txt {
+  color: #ebebff;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+  font-weight: 400;
+  padding-bottom: 1.75rem; /* 28px */
+  text-align: center;
+}
+
+form input,
+form textarea {
+  color: #172b4d;
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.25rem; /* 20px */
+  font-weight: 400;
+}
+
+textarea::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.5rem; /* 24px */
+  font-weight: 400;
+}
+
 .upper {
   text-transform: uppercase;
 }
@@ -207,6 +231,14 @@ body {
   background-image: url("./back-img/header-shapes-mobile@2x.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: auto;
+}
+
+.contact-me_sect_bg {
+  background-image: url("./back-img/contact_form_shapes-mobile@2x.svg");
+  background-color: var(--primary_b);
+  background-repeat: no-repeat;
+  background-position: right 0 top 21px;
   background-size: auto;
 }
 
@@ -391,4 +423,47 @@ main {
 .skill_item_icon {
   height: 3rem; /* 48px */
   margin: 0.5625rem 1rem 0.625rem 0.75rem; /* 9px 16px 10px 12px */
+}
+
+/* Contact section layout */
+.contact-me_section {
+  position: relative;
+  justify-content: center;
+  border-top-left-radius: 5.5rem; /* 88px */
+}
+
+.contact-me_section .content_wrapper {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 50rem; /* 800px */
+  margin-top: 13.8255033557%;
+  padding: 1.5rem; /* 24px */
+  padding-bottom: 1rem; /* 16px */
+  position: relative;
+  bottom: 0;
+}
+
+form {
+  width: 100%;
+  max-width: 27.9375rem; /* 447px */
+}
+
+.contact_form {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1.25rem;/* 20px */
+}
+
+.contact_form input,
+.contact_form textarea {
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem; /* 8px */
+  padding: 0.9375rem 1rem; /* 15px 16px */
+}
+
+.contact_form li:last-child {
+  margin-bottom: 1rem; /* 16px */
 }
