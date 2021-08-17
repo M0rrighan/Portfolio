@@ -485,6 +485,7 @@ form {
     background-position: center;
     background-size: 90%;
   }
+
   /* Media queries for Buttons */
   .xs-transparent_btn {
     padding: 0.625rem 0.75rem; /* 10px 12px */
@@ -517,7 +518,30 @@ form {
     line-height: 1.25rem; /* 20px */
   }
 
+/* Media queries for Headline Section */
+  main {
+    height: auto;
+    top: 4.5rem; /* 72px */
+  }
 
+  .headline {
+    width: 64vw;
+    max-width: 57.5rem; /* 920px */
+    margin: auto auto;
+    padding: 16.1875rem 0 15.3125rem 0; /* 259px 0 245px 0 */
+  }
+
+  .headline .main_title {
+    font-size: 3rem; /* 48px */
+    line-height: 3.75rem; /* 60px */
+    font-weight: 700;
+  }
+
+  .headline .main-desc {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
+    font-weight: 400;
+  }
 
 }
 
