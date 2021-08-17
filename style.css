@@ -467,3 +467,18 @@ form {
 .contact_form li:last-child {
   margin-bottom: 1rem; /* 16px */
 }
+
+/* ------ Media queries ------ */
+@media only screen and (min-width: 992px) {
+  /* Backgrounds */
+  .shapes_bg {
+    background-image: url("./back-img/desktop-main-bg@2x.svg");
+    background-size: 90%;
+  }
+
+  .contact-me_sect_bg {
+    background-image: url("./back-img/contact_background_shapes@2x.svg");
+    background-position: center;
+    background-size: 90%;
+  }
+}
