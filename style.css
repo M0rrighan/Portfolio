@@ -443,27 +443,3 @@ main {
   position: relative;
   bottom: 0;
 }
-
-form {
-  width: 100%;
-  max-width: 27.9375rem; /* 447px */
-}
-
-.contact_form {
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 1.25rem;/* 20px */
-}
-
-.contact_form input,
-.contact_form textarea {
-  width: 100%;
-  border: none;
-  border-radius: 0.5rem; /* 8px */
-  padding: 0.9375rem 1rem; /* 15px 16px */
-}
-
-.contact_form li:last-child {
-  margin-bottom: 1rem; /* 16px */
-}
