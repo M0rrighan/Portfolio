@@ -105,7 +105,7 @@ body {
 
 .skill_name {
   font-size: 0.9375rem; /* 15px */
-  line-height: 1.25rem; /* 20px */
+  line-height: 1.5rem; /* 24px */
   font-weight: 500;
 }
 
@@ -212,12 +212,14 @@ textarea::placeholder {
 .enabled:hover {
   color: #fff;
   background-color: var(--primary_b);
+  border: 1px solid white;
   box-shadow: 0 0.5rem 1rem rgba(64, 83, 252, 0.24); /* 0 8px 16px */
 }
 
 .enabled:active {
   color: #fff;
   background-color: #2230d2;
+  border: none;
 }
 
 .action_btn.disabled {
@@ -252,23 +254,23 @@ header {
   z-index: 1;
 }
 
-nav {
-  margin-right: 1.5rem; /* 24px */
-}
-
-.menu {
-  display: none;
-}
-
-.logo_placeholder {
+header .logo_placeholder {
   height: 100%;
   justify-content: flex-start;
   align-items: center;
   margin: 0.25rem; /* 4px */
 }
 
-.logo.xs-transparent_btn {
+.logo_placeholder .logo.xs-transparent_btn {
   padding: 0.625rem 0.75rem; /* 10px 12px */
+}
+
+header nav {
+  margin-right: 1.5rem; /* 24px */
+}
+
+nav .menu {
+  display: none;
 }
 
 /* main / headline section layout */
@@ -281,14 +283,15 @@ main {
   border-bottom-left-radius: 5.5rem; /* 88px */
 }
 
-.headline {
+main .headline {
   flex-direction: column;
   align-items: flex-start;
   margin: 30% auto 31% auto;
   padding: 0 1.5rem; /* 0 24px */
 }
 
-.social {
+.headline .social,
+.about_section .top .social {
   justify-content: space-between;
   align-items: center;
   gap: 1.25rem; /* 20px */
@@ -320,46 +323,49 @@ main {
   align-items: center;
 }
 
-.img img {
+.work_card .img img {
   width: 100%;
   height: auto;
   border-radius: 0.625rem; /* 10px */
 }
 
-.card_details {
+.work_card .card_details {
   max-width: 90vw;
   flex-direction: column;
   align-content: flex-start;
 }
 
-.project_details_wrapper {
+.card_details .project_details_wrapper {
   width: 100%;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-.card_details .project_title {
+.project_details_wrapper .project_title {
   padding-right: 0.125rem; /* 2px */
 }
 
-.project_details {
+.project_details_wrapper .project_details {
   justify-content: flex-start;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
+  margin: 1.25rem 0; /* 20px */
 }
 
-.tags {
+.work_card .tags {
   justify-content: flex-start;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
   gap: 0.5rem; /* 8px */
+  margin: 0.75rem 0 1.5rem 0; /* 12px 0 24px 0 */
 }
 
-.action {
+.work_card .action {
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 0.75rem; /* 12px */
 }
 
 /* About section layout */
@@ -368,13 +374,13 @@ main {
   border-top-right-radius: 5.5rem; /* 88px */
 }
 
-.about_section {
+/* .about_section {
   height: 90%;
   top: 0;
   gap: 1.5rem; /* 24px */
-}
+/*} */
 
-.top {
+.about_section .top {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -384,12 +390,12 @@ main {
   margin: 0.625rem 0; /* 10px 0 */
 }
 
-.skills {
+.about_section .skills {
   display: grid;
   grid-template-columns: 100%;
 }
 
-.skill_frame {
+.skills li .skill_frame {
   height: 4.5rem; /* 72px */
   justify-content: space-between;
   align-content: center;
@@ -397,21 +403,21 @@ main {
   padding: 0 0.75rem; /* 0 12px */
 }
 
-.separator {
+.skills li .skill_frame.separator {
   border-bottom: 1px solid #dfe1e6;
 }
 
-.expand_collapse {
+.skills li .skill_frame .expand_collapse {
   margin: 0 0.875rem; /* 14px */
 }
 
-.skill_content {
+.skills li .skill_content {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr;
   padding: 0.75rem; /* 12px */
 }
 
-.skill_item {
+.skills li .skill_content .skill_item {
   justify-content: flex-start;
   align-items: center;
   color: #253858;
@@ -419,7 +425,7 @@ main {
   border-radius: 0.5rem; /* 8px */
 }
 
-.skill_item_icon {
+.skill_content .skill_item .skill_item_icon {
   height: 3rem; /* 48px */
   margin: 0.5625rem 1rem 0.625rem 0.75rem; /* 9px 16px 10px 12px */
 }
@@ -443,12 +449,12 @@ main {
   bottom: 0;
 }
 
-form {
+.contact-me_section .content_wrapper form {
   width: 100%;
   max-width: 27.9375rem; /* 447px */
 }
 
-.contact_form {
+form ul.contact_form {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
@@ -492,34 +498,34 @@ form {
     padding: 0 10.02%;
   }
 
-  .menu_btn {
+  nav {
+    margin-right: 0;
+  }
+
+  nav .menu_btn {
     display: none;
   }
 
-  .menu {
+  nav .menu {
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: 0.5rem; /* 8px */
   }
 
-  nav {
-    margin-right: 0;
-  }
-
-  nav .btn {
+  nav .menu .btn {
     letter-spacing: 0;
     font-size: 0.9375rem; /* 15px */
     line-height: 1.25rem; /* 20px */
   }
 
-/* Media queries for Headline Section */
+  /* Media queries for Headline Section */
   main {
     height: auto;
     top: 4.5rem; /* 72px */
   }
 
-  .headline {
+  main .headline {
     max-width: 57.5rem; /* 920px */
     margin: auto auto;
     padding: 16.1875rem 0 15.3125rem 0; /* 259px 0 245px 0 */
@@ -537,63 +543,111 @@ form {
     font-weight: 400;
   }
 
-/* Media queries for Work Section */
-.works_section {
-  padding: 8.875rem 9.978%; /* 142px 142px */
+  /* Media queries for Work Section */
+  .works_section {
+    padding: 8.875rem 9.978%; /* 142px 142px */
+  }
+
+  .works_section .work_card {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 1.375rem; /* 22px */
+    padding: 1.5rem; /* 24px */
+  }
+
+  .works_section .work_card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .works_section .work_card .img {
+    width: 50%;
+    height: 100%;
+  }
+
+  .works_section .work_card .card_details {
+    width: 50%;
+    max-width: none;
+    padding: 1.5rem; /* 24px */
+  }
+
+  .project_details_wrapper .project_title {
+    font-size: 2.5rem; /* 40px */
+    line-height: 3.25rem; /* 52px */
+  }
+
+  .project_details_wrapper .project_details .project_info_txt {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.5rem; /* 24px */
+    font-weight: 400;
+  }
+
+  .project_details .project_info_txt.upper {
+    font-weight: 500;
+  }
+
+  .card_details .descriptive_txt {
+    font-size: 1rem; /* 16px */
+    padding: 0.75rem 0; /* 12px 0 */
+  }
+
+  .card_details .tags {
+    margin:  0.75rem 0; /* 12px 0 */
+  }
+
+  .card_details .action {
+    margin-top:  1.75rem; /* 28px */
+  }
+  
+  /* Media queries for About Section */
+  .about_section {
+    grid-template-columns: 38.66782% 59.16955%;
+    gap: 1.5625rem; /* 25px */
+    padding: 8.875rem 9.978% 8.375rem 9.978%;
+  }
+   
+  .about_section .top .main_title {
+    font-weight: 700;
+  }
+
+  .about_section .skills {
+    padding: 0.75rem; /* 12px */
+  }
+
+  .skills li .skill_frame {
+    padding: 0 1.5rem; /* 0 24px */
+  }
+
+  .skills li .skill_content {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem; /* 12px */
+  }
+
+  .skills li .skill_content .skill_item {
+    width: 7.625rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.75rem 0.75rem 1.25rem 0.75rem; /* 12px */
+    gap: 1rem; /* 16px */
+  }
+
+  .skill_content .skill_item .skill_item_icon {
+    margin: 0;
+  }
+
+/* Media queries for Contact-me Section */
+  .contact-me_section .content_wrapper .contact_txt {
+    margin: 0 5.75rem; /* 92px = 116-24parent p */
+  }
+
+  form ul.contact_form {
+    gap: 1.6875rem; /* 27px */
+  }
+
+  form .contact_form li:last-child {
+    align-self: center;
+    margin-bottom: 7.9375rem; /* 127px */
+  }
 }
-
-.works_section .work_card:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.works_section .work_card {
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  gap: 1.375rem; /* 22px */
-  padding: 1.5rem; /* 24px */
-}
-
-.works_section .work_card .img {
-  width: 50%;
-  height: 100%;
-}
-
-.works_section .work_card .card_details {
-  width: 50%;
-  max-width: none;
-  gap: 1.5rem; /* 24px */
-  padding: 1.5rem; /* 24px */
-}
-
-.card_details .project_details_wrapper {
-  gap: 1.25rem; /* 20px */
-}
-
-.project_details_wrapper .project_title {
-  font-size: 2.5rem; /* 40px */
-  line-height: 3.25rem; /* 52px */
-}
-
-.project_details_wrapper .project_details .project_info_txt {
-  font-size: 1.125rem; /* 18px */
-  line-height: 1.5rem; /* 24px */
-  font-weight: 400;
-}
-
-.project_details .project_info_txt.upper {
-  font-weight: 500;
-}
-
-.card_details .descriptive_txt {
-  font-size: 1rem; /* 16px */
-  padding-top: 0.5rem /* 8px */;
-}
-
-.card_details .tags {
-  margin-bottom: 1rem; /* 16px */
-}
-
-}
-
-
