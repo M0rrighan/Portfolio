@@ -374,12 +374,6 @@ main .headline {
   border-top-right-radius: 5.5rem; /* 88px */
 }
 
-/* .about_section {
-  height: 90%;
-  top: 0;
-  gap: 1.5rem; /* 24px */
-/*} */
-
 .about_section .top {
   flex-direction: column;
   justify-content: center;
@@ -592,20 +586,20 @@ form ul.contact_form {
   }
 
   .card_details .tags {
-    margin:  0.75rem 0; /* 12px 0 */
+    margin: 0.75rem 0; /* 12px 0 */
   }
 
   .card_details .action {
-    margin-top:  1.75rem; /* 28px */
+    margin-top: 1.75rem; /* 28px */
   }
-  
+
   /* Media queries for About Section */
   .about_section {
     grid-template-columns: 38.66782% 59.16955%;
     gap: 1.5625rem; /* 25px */
     padding: 8.875rem 9.978% 8.375rem 9.978%;
   }
-   
+
   .about_section .top .main_title {
     font-weight: 700;
   }
@@ -637,7 +631,7 @@ form ul.contact_form {
     margin: 0;
   }
 
-/* Media queries for Contact-me Section */
+  /* Media queries for Contact-me Section */
   .contact-me_section .content_wrapper .contact_txt {
     margin: 0 5.75rem; /* 92px = 116-24parent p */
   }
