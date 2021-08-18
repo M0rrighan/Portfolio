@@ -45,6 +45,12 @@ body {
   gap: 0.75rem; /* 12px */
 }
 
+section,
+footer {
+  position: relative;
+  top: 3rem; /* 48px */
+}
+
 /* Typography and Colors */
 .neutral_n {
   color: var(--neutral_n);
@@ -245,7 +251,7 @@ textarea::placeholder {
 }
 
 /* Header layout  */
-header {
+header .navbar {
   position: fixed;
   width: 100vw;
   height: 3rem; /* 48px */
@@ -254,7 +260,7 @@ header {
   z-index: 1;
 }
 
-header .logo_placeholder {
+header .navbar .logo_placeholder {
   height: 100%;
   justify-content: flex-start;
   align-items: center;
@@ -265,7 +271,7 @@ header .logo_placeholder {
   padding: 0.625rem 0.75rem; /* 10px 12px */
 }
 
-header nav {
+header .navbar nav {
   margin-right: 1.5rem; /* 24px */
 }
 
@@ -273,24 +279,21 @@ nav .menu {
   display: none;
 }
 
-/* main / headline section layout */
-main {
-  position: relative;
-  top: 3rem; /* 48px */
+.headline {
   width: 100%;
   align-items: center;
   align-content: center;
   border-bottom-left-radius: 5.5rem; /* 88px */
 }
 
-main .headline {
+.headline .headline_content {
   flex-direction: column;
   align-items: flex-start;
   margin: 30% auto 31% auto;
   padding: 0 1.5rem; /* 0 24px */
 }
 
-.headline .social,
+.headline_content .social,
 .about_section .top .social {
   justify-content: space-between;
   align-items: center;
@@ -369,9 +372,11 @@ main .headline {
 }
 
 /* About section layout */
-.about_base {
+.about_section {
   position: relative;
   border-top-right-radius: 5.5rem; /* 88px */
+  margin-bottom: -4rem;
+  padding-bottom: 11.125rem; /* -4rem negative margin = 7.125rrem = 114px */
 }
 
 .about_section .top {
@@ -426,7 +431,6 @@ main .headline {
 
 /* Contact section layout */
 .contact-me_section {
-  position: relative;
   justify-content: center;
   border-top-left-radius: 5.5rem; /* 88px */
 }
@@ -469,6 +473,12 @@ form ul.contact_form {
 
 /* ------ Media queries ------ */
 @media only screen and (min-width: 992px) {
+  section,
+  footer {
+    position: relative;
+    top: 4.5rem; /* 72px */
+  }
+
   /* Media queries for Backgrounds */
   .shapes_bg {
     background-image: url("./back-img/desktop-main-bg@2x.svg");
@@ -487,7 +497,7 @@ form ul.contact_form {
   }
 
   /* Media queries for Header */
-  header {
+  header .navbar {
     height: 4.5rem; /* 72px */
     padding: 0 10.02%;
   }
@@ -513,25 +523,23 @@ form ul.contact_form {
     line-height: 1.25rem; /* 20px */
   }
 
-  /* Media queries for Headline Section */
-  main {
+  .headline {
     height: auto;
-    top: 4.5rem; /* 72px */
   }
 
-  main .headline {
+  .headline .headline_content {
     max-width: 57.5rem; /* 920px */
     margin: auto auto;
-    padding: 16.1875rem 0 15.3125rem 0; /* 259px 0 245px 0 */
+    padding: 18rem 0 15.9375rem 0; /* 288px 0 255px 0 */
   }
 
-  .headline .main_title {
+  .headline_content .main_title {
     font-size: 3rem; /* 48px */
     line-height: 3.75rem; /* 60px */
     font-weight: 700;
   }
 
-  .headline .main-desc {
+  .headline_content .main-desc {
     font-size: 1.25rem; /* 20px */
     line-height: 1.75rem; /* 28px */
     font-weight: 400;
@@ -597,7 +605,7 @@ form ul.contact_form {
   .about_section {
     grid-template-columns: 38.66782% 59.16955%;
     gap: 1.5625rem; /* 25px */
-    padding: 8.875rem 9.978% 8.375rem 9.978%;
+    padding: 8.875rem 9.978% 12.375rem 9.978%;
   }
 
   .about_section .top .main_title {
