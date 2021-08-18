@@ -632,6 +632,10 @@ form ul.contact_form {
   }
 
   /* Media queries for Contact-me Section */
+  .contact-me_section .content_wrapper {
+    margin-top: 7.375rem; /* 118px = 142-24p */
+  }
+
   .contact-me_section .content_wrapper .contact_txt {
     margin: 0 5.75rem; /* 92px = 116-24parent p */
   }
