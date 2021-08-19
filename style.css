@@ -676,11 +676,13 @@ Animations keyframes
   0% {
     transform: translateY(-150px);
   }
-  50%{
+
+  50% {
     transform: translateY(50px) rotateY(180deg);
-   }
+  }
+
   100% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 }
 
@@ -689,6 +691,7 @@ Animations keyframes
     transform: translateX(-200px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
