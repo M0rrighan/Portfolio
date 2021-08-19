@@ -88,12 +88,17 @@ footer {
   font-size: 1.125rem; /* 18px */
   line-height: 1.25rem; /* 20px */
   font-weight: 700;
+  animation: slide 1000ms ease-in-out;
 }
 
 .main_title {
   font-size: 2.5rem; /* 40px */
   line-height: 3.25rem; /* 52px */
   font-weight: 800;
+  animation: from_left 350ms ease-in-out 200ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateX(-200px);
 }
 
 .project_title {
@@ -330,6 +335,11 @@ nav .menu {
   width: 100%;
   height: auto;
   border-radius: 0.625rem; /* 10px */
+  transition: 0.5s ease-in-out;
+}
+
+.work_card .img img:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .work_card .card_details {
@@ -655,5 +665,35 @@ form ul.contact_form {
   form .contact_form li:last-child {
     align-self: center;
     margin-bottom: 7.9375rem; /* 127px */
+  }
+}
+
+/*******************
+Animations keyframes
+********************/
+
+@keyframes slide {
+  0% {
+    transform: translateY(-150px);
+  }
+
+  50% {
+    transform: translateY(50px) rotateY(180deg);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes from_left {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
