@@ -7,11 +7,13 @@ const navLinks = document.querySelectorAll('header nav ul.menu li')
 function showMenu () {
   menu.classList.add('opened');
   closeMenuBtn.style.display = 'block';
+  body.style.overflow = 'hidden';
 }
 
 function hideMenu () {
   menu.classList.remove('opened');
   closeMenuBtn.style.display = 'none';
+  body.style.overflow = 'auto';
 }
 
 openMenuBtn.addEventListener('click', showMenu);
