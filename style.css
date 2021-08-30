@@ -306,7 +306,9 @@ nav .menu.opened li {
 
 .closeMenuBtn {
   display: none;
-  position: fixed; 
+  position: fixed;
+  top: 12px;
+  z-index: 10;
   color: #fff;
   right: 0;
   margin-right: 24px;
