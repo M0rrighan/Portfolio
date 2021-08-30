@@ -284,6 +284,36 @@ nav .menu {
   display: none;
 }
 
+nav .menu.opened {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(96, 112, 255, 0.75);
+  color: #fff;
+  font-size: 2rem; /* 32px */
+  line-height: 2.75rem; /* 44px */
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+  padding: 3.625rem 1.75rem; /* 58px 28px */
+}
+
+nav .opened li {
+  justify-content: start;
+}
+
+.closeMenuBtn {
+  display: none;
+  position: fixed;
+  top: 0.75rem; /* 12px */
+  right: 0;
+  color: #fff;
+  margin-right: 1.5rem; /* 24px */
+  z-index: 10;
+}
+
 .headline {
   width: 100%;
   align-items: center;

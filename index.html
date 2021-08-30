@@ -25,8 +25,11 @@
         <a href="index.html" class="logo xs-transparent_btn primary_b">My Logo</a>
       </div>
       <nav>
-        <a href="#menu" class="btn xs-transparent_btn df btn_fc menu_btn">
+        <a href="#menu" class="btn xs-transparent_btn df btn_fc menu_btn openMenuBtn">
           <i class="material-icons primary_b">menu</i>
+        </a>
+        <a href="#menu" class="btn xs-transparent_btn df btn_fc menu_btn closeMenuBtn">
+          <i class="material-icons white">close</i>
         </a>
         <ul class="menu">
           <li class="btn xs-transparent_btn df btn_fc">
@@ -77,7 +80,7 @@
       </div>
     </section>
 
-    <section class="works_section">
+    <section id="Portfolio" class="works_section">
       <!-- project 1 -->
       <article class="df work_card gap12 bg_white">
         <div class="df img">
@@ -202,7 +205,7 @@
       </article>
     </section>
 
-    <section class="about_section bg_white">
+    <section id="About" class="about_section bg_white">
       <div class="df top gap12">
         <h2 class="main_title neutral_b">
           About <br />
@@ -328,6 +331,7 @@
       </form>
     </div>
   </footer>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>
