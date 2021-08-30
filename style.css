@@ -284,6 +284,34 @@ nav .menu {
   display: none;
 }
 
+nav .menu.opened {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(96, 112, 255, 0.75);
+  color: #fff;
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+  padding: 58px 28px;
+}
+
+nav .menu.opened li {
+  justify-content: start;
+}
+
+.closeMenuBtn {
+  display: none;
+  position: fixed; 
+  color: #fff;
+  right: 0;
+  margin-right: 24px;
+}
+
 .headline {
   width: 100%;
   align-items: center;
