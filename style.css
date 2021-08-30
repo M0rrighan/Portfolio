@@ -300,7 +300,7 @@ nav .menu.opened {
   padding: 3.625rem 1.75rem; /* 58px 28px */
 }
 
-nav .menu.opened li {
+nav .opened li {
   justify-content: start;
 }
 
@@ -309,7 +309,7 @@ nav .menu.opened li {
   position: fixed;
   top: 0.75rem; /* 12px */
   right: 0;
-  color: #fff;  
+  color: #fff;
   margin-right: 1.5rem; /* 24px */
   z-index: 10;
 }
