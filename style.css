@@ -378,7 +378,7 @@ nav .opened li {
   align-content: flex-start;
 }
 
-.card_details .project_details_wrapper {
+.project_details_wrapper {
   width: 100%;
   flex-direction: column;
   flex-wrap: wrap;
@@ -410,6 +410,49 @@ nav .opened li {
   align-items: center;
   margin-bottom: 0.75rem; /* 12px */
 }
+
+/* Modals and overlay */
+.modal {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  border-radius: 16px;
+  z-index: 10;
+  background-color: #fff;
+  height: 95%;
+  overflow-y: auto;
+  transform: scale(0);
+  transition: 300ms ease-in-out;
+}
+
+.modal.active {
+  transform: scale(1);
+  transition: 300ms ease-in-out;
+}
+
+.close_modal {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.452);
+  opacity: 0;
+  z-index: -5;
+}
+
+.overlay.active {
+  opacity: 1;
+  z-index: 5;
+}
+
 
 /* About section layout */
 .about_section {
