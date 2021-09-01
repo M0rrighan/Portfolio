@@ -440,6 +440,18 @@ nav .opened li {
   top: 1rem;
 }
 
+.modal .card_details .descriptive_txt {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.modal .work_card .action {
+  padding-top: 1.5rem;
+  border-top: 1px solid #ebecf0;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -715,7 +727,13 @@ form ul.contact_form {
 
   .modal .work_card .card_details {
     grid-template-columns: 7fr 3fr;
-    padding: 1.5rem; /* 24px */
+    padding: 1.5rem 0; /* 24px 0 */
+    gap: 1.5rem;
+  }
+  .modal .work_card .card_details .descriptive_txt {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    -webkit-line-clamp: unset; /* number of lines to show */
   }
 
   /* Media queries for About Section */
