@@ -374,6 +374,10 @@ nav .opened li {
   transform: scale(1.1, 1.1);
 }
 
+.modal .work_card .img img:hover {
+  transform: none;
+}
+
 .work_card .card_details {
   display: grid;
   grid-template-columns: 1fr;
