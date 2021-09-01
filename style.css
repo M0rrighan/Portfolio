@@ -417,13 +417,13 @@ nav .opened li {
 /* Modals and overlay */
 .modal {
   position: fixed;
-  top: 1rem;
+  top: 3.75rem;
   left: 1rem;
   right: 1rem;
   border-radius: 1rem;
   z-index: 10;
   background-color: #fff;
-  height: 95%;
+  height: unset;
   overflow-y: auto;
   transform: scale(0);
   transition: 600ms ease-in-out;
@@ -432,6 +432,10 @@ nav .opened li {
 .modal.active {
   transform: scale(1);
   transition: 600ms ease-in-out;
+}
+
+.modal .work_card {
+  border: none;
 }
 
 .close_modal {
@@ -700,9 +704,10 @@ form ul.contact_form {
 
   /* Media queries for Modals */
   .modal {
-    width: 80%;
-    height: 90%;
-    margin: 2rem auto;
+    width: 80.417%;
+    margin: auto;
+    top: 4.75rem;
+    bottom: 4.75rem;
   }
 
   .modal .work_card {
