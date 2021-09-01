@@ -6,6 +6,7 @@
 
 ![screenshot](./screenshots/desktop_screenshots.jpg)
 ![screenshot](./screenshots/mobile_screenshots.jpg)
+![screenshot](./screenshots/popup_mob_desk_screenshots.jpg)
 
 ## Live Demo
 
@@ -14,7 +15,8 @@
 ## Built With
 
 - HTML
-- CSS (using Flex)
+- CSS (using Flex, Grid)
+- JS
 
 ## Getting Started
 
