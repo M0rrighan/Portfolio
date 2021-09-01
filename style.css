@@ -373,9 +373,10 @@ nav .opened li {
 }
 
 .work_card .card_details {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
   max-width: 90vw;
-  flex-direction: column;
-  align-content: flex-start;
 }
 
 .project_details_wrapper {
@@ -417,7 +418,7 @@ nav .opened li {
   top: 1rem;
   left: 1rem;
   right: 1rem;
-  border-radius: 16px;
+  border-radius: 1rem;
   z-index: 10;
   background-color: #fff;
   height: 95%;
@@ -682,6 +683,39 @@ form ul.contact_form {
 
   .card_details .action {
     margin-top: 1.75rem; /* 28px */
+  }
+
+  /* Media queries for Modals*/
+  .modal {
+    width: 80%;
+    height: 90%;
+    margin: 2rem auto;
+  }
+
+  .modal .work_card {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    padding: 1.5rem; /* 24px */
+  }
+
+  .modal .work_card .img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .modal .work_card .img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal .work_card .card_details {
+    grid-template-columns: 7fr 3fr;
+    /* width: 50%;
+    max-width: none; */
+    padding: 1.5rem; /* 24px */
   }
 
   /* Media queries for About Section */
