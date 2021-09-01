@@ -129,10 +129,10 @@ function createCard(object, index) {
   </p>
   <ul class="df tags">
   ${object.technologies.map((tech) => `<li class="btn tag_btn"> 
-  ${tech}</li>`)}
+  ${tech}</li>`).join('')}
   </ul>
   <div class="df action">
-    <a href="#Modal_${index + 1}" class="btn action_btn enabled">See Project</a>
+    <a href="#Modal${index + 1}" class="btn action_btn enabled">See Project</a>
   </div>
 </div>`
 return article;
