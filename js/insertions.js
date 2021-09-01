@@ -104,3 +104,40 @@ const projects = [
     soureUrl: 'mpStories.html',
   },
 ];
+
+const portfolioContainer = document.getElementById('Portfolio');
+
+function createCard(object, index) {
+  let article = document.createElement('article');
+  article.classList.add('df', 'work_card', 'gap12', 'bg_white')
+  article.innerHTML = `<div class="df img">
+<img src="${object.image.imageUrl}" alt="${object.image.imageAlt}" />
+</div>
+<div class="df card_details">
+  <div class="df project_details_wrapper">
+    <h3 class="project_title neutral_b">${object.title}</h3>
+    <ul class="df project_details gap12"> 
+      <li title="client" class="project_info_txt upper neutral_n">${object.details.client}</li>
+      <li><i class="material-icons small light_grey">circle</i></li>
+      <li title="role" class="project_info_txt dark_grey">${object.details.role}</li>
+      <li><i class="material-icons small light_grey">circle</i></li>
+      <li title="year" class="project_info_txt dark_grey">${object.details.year}</li>
+    </ul>
+  </div>
+  <p class="descriptive_txt fs_15 neutral_n">
+   ${object.shortDescription}
+  </p>
+  <ul class="df tags">
+  ${object.technologies.map((tech) => `<li class="btn tag_btn"> 
+  ${tech}</li>`)}
+  </ul>
+  <div class="df action">
+    <a href="#Modal_${index + 1}" class="btn action_btn enabled">See Project</a>
+  </div>
+</div>`
+return article;
+}
+
+projects.forEach(project => {
+  portfolioContainer.appendChild(createCard(project, 0));
+});
