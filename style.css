@@ -364,6 +364,8 @@ nav .opened li {
 .work_card .img img {
   width: 100%;
   height: auto;
+  object-fit: cover;
+  object-position: center;
   border-radius: 0.625rem; /* 10px */
   transition: 0.5s ease-in-out;
 }
@@ -424,12 +426,12 @@ nav .opened li {
   height: 95%;
   overflow-y: auto;
   transform: scale(0);
-  transition: 300ms ease-in-out;
+  transition: 600ms ease-in-out;
 }
 
 .modal.active {
   transform: scale(1);
-  transition: 300ms ease-in-out;
+  transition: 600ms ease-in-out;
 }
 
 .close_modal {
@@ -713,8 +715,6 @@ form ul.contact_form {
 
   .modal .work_card .card_details {
     grid-template-columns: 7fr 3fr;
-    /* width: 50%;
-    max-width: none; */
     padding: 1.5rem; /* 24px */
   }
 
