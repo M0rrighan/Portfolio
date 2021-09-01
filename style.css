@@ -468,7 +468,6 @@ nav .opened li {
   z-index: 5;
 }
 
-
 /* About section layout */
 .about_section {
   position: relative;
@@ -656,7 +655,7 @@ form ul.contact_form {
     padding: 1.5rem; /* 24px */
   }
 
-  .works_section .work_card:nth-child(even) {
+  .work_card:nth-child(even) {
     flex-direction: row-reverse;
   }
 
@@ -699,7 +698,7 @@ form ul.contact_form {
     margin-top: 1.75rem; /* 28px */
   }
 
-  /* Media queries for Modals*/
+  /* Media queries for Modals */
   .modal {
     width: 80%;
     height: 90%;
@@ -730,6 +729,7 @@ form ul.contact_form {
     padding: 1.5rem 0; /* 24px 0 */
     gap: 1.5rem;
   }
+
   .modal .work_card .card_details .descriptive_txt {
     font-size: 1.25rem;
     line-height: 2rem;

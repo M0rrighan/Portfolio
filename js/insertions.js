@@ -1,7 +1,8 @@
 const portfolioContainer = document.getElementById('Portfolio');
 const modalsContainer = document.getElementsByClassName('modals_container')[0];
 const projects = [
-  { id: 1,
+  {
+    id: 1,
     title: 'Tonic',
     details: {
       client: 'Canopy',
