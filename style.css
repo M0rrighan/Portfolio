@@ -800,7 +800,9 @@ form ul.contact_form {
   form .contact_form li:last-child {
     align-self: center;
     margin-bottom: 7.9375rem; /* 127px */
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*******************

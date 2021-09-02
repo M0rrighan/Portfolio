@@ -5,15 +5,16 @@ const alertMsg = document.createElement('p');
 alertParent.appendChild(alertMsg);
 alertMsg.style.visibility = 'hidden';
 alertMsg.textContent = ' * Please change your email to lower case.';
-alertMsg.style.color = '#e74c3c';
-alertMsg.style.paddingTop = '7px';
+alertMsg.style.color = '#d62814';
+alertMsg.style.paddingTop = '0.5rem';
 alertMsg.style.fontWeight = 'bold';
+alertMsg.style.fontSize = '1.25rem';
 
 
 form.addEventListener('submit', (e) => {
   if (email.value !== email.value.toLowerCase()) {
     alertMsg.style.visibility = 'visible';
-    email.style.border = '2px solid #e74c3c';
+    email.style.border = '2px solid #d62814';
     e.preventDefault();
   } else {
     alertMsg.style.visibility = 'hidden';
