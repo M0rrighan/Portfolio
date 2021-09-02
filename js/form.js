@@ -31,7 +31,6 @@ message.addEventListener('change', (e) => {
   inputs.enterdMessage = e.target.value;
 });
 
-
 form.addEventListener('submit', (e) => {
   if (email.value !== email.value.toLowerCase()) {
     alertMsg.style.visibility = 'visible';
@@ -40,6 +39,5 @@ form.addEventListener('submit', (e) => {
   } else {
     alertMsg.style.visibility = 'hidden';
     email.style.border = '1px solid #d0d9d4';
-    
   }
 });
