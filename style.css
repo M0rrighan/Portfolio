@@ -11,7 +11,6 @@ html {
   box-sizing: border-box;
 }
 
-
 /* global */
 :root {
   --primary_n: #7f8cff;
@@ -803,34 +802,35 @@ form ul.contact_form {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
 
-/*******************
+  /*******************
 Animations keyframes
 ********************/
 
-@keyframes slide {
-  0% {
-    transform: translateY(-150px);
+  @keyframes slide {
+    0% {
+      transform: translateY(-150px);
+    }
+
+    50% {
+      transform: translateY(50px) rotateY(180deg);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
 
-  50% {
-    transform: translateY(50px) rotateY(180deg);
-  }
+  @keyframes from_left {
+    0% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
 
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes from_left {
-  0% {
-    transform: translateX(-200px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }

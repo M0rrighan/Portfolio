@@ -10,7 +10,6 @@ alertMsg.style.paddingTop = '0.5rem';
 alertMsg.style.fontWeight = 'bold';
 alertMsg.style.fontSize = '1.25rem';
 
-
 form.addEventListener('submit', (e) => {
   if (email.value !== email.value.toLowerCase()) {
     alertMsg.style.visibility = 'visible';
