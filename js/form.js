@@ -48,3 +48,15 @@ form.addEventListener('submit', (e) => {
     storeData();
   }
 });
+
+function retreiveAndPreFill() {
+  const dataFromStorage = localStorage.getItem('database');
+  if (dataFromStorage) {
+    const retreivedObject = JSON.parse(dataFromStorage);
+    username.value = retreivedObject.enteredName;
+    email.value = retreivedObject.enterdEmail;
+    message.value = retreivedObject.enterdMessage;
+  }
+}
+retreiveAndPreFill();
+
