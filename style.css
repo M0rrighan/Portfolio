@@ -799,35 +799,38 @@ form ul.contact_form {
   form .contact_form li:last-child {
     align-self: center;
     margin-bottom: 7.9375rem; /* 127px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
 
-/*******************
+  /*******************
 Animations keyframes
 ********************/
 
-@keyframes slide {
-  0% {
-    transform: translateY(-150px);
+  @keyframes slide {
+    0% {
+      transform: translateY(-150px);
+    }
+
+    50% {
+      transform: translateY(50px) rotateY(180deg);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
 
-  50% {
-    transform: translateY(50px) rotateY(180deg);
-  }
+  @keyframes from_left {
+    0% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
 
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes from_left {
-  0% {
-    transform: translateX(-200px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }
