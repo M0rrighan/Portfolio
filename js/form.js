@@ -15,28 +15,7 @@ const username = document.getElementById('name');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 
-const inputs = {
-  enteredName: '',
-  enterdEmail: '',
-  enterdMessage: '',
-};
-
-username.addEventListener('change', (e) => {
-  inputs.enteredName = e.target.value;
-});
-email.addEventListener('change', (e) => {
-  inputs.enterdEmail = e.target.value;
-});
-message.addEventListener('change', (e) => {
-  inputs.enterdMessage = e.target.value;
-});
-
-function storeData() {
-  if (localStorage.getItem('database') !== JSON.stringify(inputs)) {
-    localStorage.setItem('database', JSON.stringify(inputs));
-  }
-}
-
+// Form Email input validation
 form.addEventListener('submit', (e) => {
   if (email.value !== email.value.toLowerCase()) {
     alertMsg.style.visibility = 'visible';
@@ -45,10 +24,37 @@ form.addEventListener('submit', (e) => {
   } else {
     alertMsg.style.visibility = 'hidden';
     email.style.border = '1px solid #d0d9d4';
-    storeData();
   }
 });
 
+// Object to store in localStorage (as string)
+const inputs = {
+  enteredName: '',
+  enterdEmail: '',
+  enterdMessage: '',
+};
+
+function storeData() {
+  if (localStorage.getItem('database') !== JSON.stringify(inputs)) {
+    localStorage.setItem('database', JSON.stringify(inputs));
+  }
+}
+
+// on change: update object values and store data
+username.addEventListener('change', (e) => {
+  inputs.enteredName = e.target.value;
+  storeData();
+});
+email.addEventListener('change', (e) => {
+  inputs.enterdEmail = e.target.value;
+  storeData();
+});
+message.addEventListener('change', (e) => {
+  inputs.enterdMessage = e.target.value;
+  storeData();
+});
+
+// reads from localStorage and fills form fields with the stored values, if any
 function retreiveAndPreFill() {
   const dataFromStorage = localStorage.getItem('database');
   if (dataFromStorage) {
