@@ -37,7 +37,7 @@ function retreiveAndPreFill() {
     message.value = retreivedObject.enterdMessage;
     return retreivedObject;
   }
-  return null;
+  return '';
 }
 
 // Object to store in localStorage (as string)
