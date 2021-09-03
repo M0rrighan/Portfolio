@@ -27,11 +27,24 @@ form.addEventListener('submit', (e) => {
   }
 });
 
+// reads from localStorage and fills form fields with the stored values, if any
+function retreiveAndPreFill() {
+  const dataFromStorage = localStorage.getItem('database');
+  if (dataFromStorage) {
+    const retreivedObject = JSON.parse(dataFromStorage);
+    username.value = retreivedObject.enteredName;
+    email.value = retreivedObject.enterdEmail;
+    message.value = retreivedObject.enterdMessage;
+    return retreivedObject;
+  }
+  return null;
+}
+
 // Object to store in localStorage (as string)
 const inputs = {
-  enteredName: '',
-  enterdEmail: '',
-  enterdMessage: '',
+  enteredName: retreiveAndPreFill().enteredName,
+  enterdEmail: retreiveAndPreFill().enterdEmail,
+  enterdMessage: retreiveAndPreFill().enterdMessage,
 };
 
 function storeData() {
@@ -54,14 +67,4 @@ message.addEventListener('change', (e) => {
   storeData();
 });
 
-// reads from localStorage and fills form fields with the stored values, if any
-function retreiveAndPreFill() {
-  const dataFromStorage = localStorage.getItem('database');
-  if (dataFromStorage) {
-    const retreivedObject = JSON.parse(dataFromStorage);
-    username.value = retreivedObject.enteredName;
-    email.value = retreivedObject.enterdEmail;
-    message.value = retreivedObject.enterdMessage;
-  }
-}
 retreiveAndPreFill();
