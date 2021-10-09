@@ -3,30 +3,24 @@ const modalsContainer = document.getElementsByClassName('modals_container')[0];
 const projects = [
   {
     id: 1,
-    title: 'Tonic',
+    title: 'To Do List',
     details: {
-      client: 'Canopy',
-      role: 'Back End Dev',
-      year: '2015',
+      client: 'Learning Project',
+      role: 'Full Stack Dev',
+      year: '2021',
     },
-    shortDescription: `A daily selection of privately personalized reads; no accounts or 
-    sign-ups required.`,
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-    unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, 
-    remaining essent, Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-    unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, 
-    remaining essent`,
+    shortDescription: `A simple yet powerful to-do list, inspired by the minimalist website.
+    It allows the user to add tasks, edit and remove tasks, clear all completed tasks.`,
+    description: `A simple yet powerful to-do list, inspired by the minimalist website.
+    It allows the user to add tasks, edit and remove tasks, clear all completed tasks.
+    Drag and drop is also allowed, giving the possibility to re order the list as pleased.`,
     image: {
-      imageUrl: './img/snapshoot1.png',
-      imageAlt: 'project 1 preview image',
+      imageUrl: './img/TDL.gif',
+      imageAlt: 'preview of To Do List project',
     },
     technologies: ['html', 'css', 'javaScript'],
-    liveUrl: 'TonicLive.html',
-    soureUrl: 'Tonic.html',
+    liveUrl: 'https://m0rrighan.github.io/To-do-list/',
+    soureUrl: 'https://github.com/M0rrighan/To-do-list',
   },
   {
     id: 2,
