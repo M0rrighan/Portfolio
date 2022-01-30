@@ -42,9 +42,9 @@ function retreiveAndPreFill() {
 
 // Object to store in localStorage (as string)
 const inputs = {
-  enteredName: retreiveAndPreFill().enteredName,
-  enterdEmail: retreiveAndPreFill().enterdEmail,
-  enterdMessage: retreiveAndPreFill().enterdMessage,
+  enteredName: '',
+  enterdEmail: '',
+  enterdMessage: '',
 };
 
 function storeData() {

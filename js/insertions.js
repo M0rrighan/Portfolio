@@ -3,6 +3,66 @@ const modalsContainer = document.getElementsByClassName('modals_container')[0];
 const projects = [
   {
     id: 1,
+    title: 'Book store',
+    details: {
+      client: 'Learning Project',
+      role: 'Full Stack Dev',
+      year: '2022',
+    },
+    shortDescription: `The Bookstore is a website that allows you to display a list of books,
+    add a book, remove a selected book..`,
+    description: `The Bookstore is a website that allows you to display a list of books,
+    add a book, remove a selected book. Categories page is coming soon`,
+    image: {
+      imageUrl: './img/bookstore.gif',
+      imageAlt: 'preview of BookStore project',
+    },
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Redux'],
+    liveUrl: 'https://m0rrighan.github.io/bookstore-react-redux/',
+    soureUrl: 'https://github.com/M0rrighan/bookstore-react-redux',
+  },
+  {
+    id: 2,
+    title: 'Math Magicians',
+    details: {
+      client: 'Learning Project',
+      role: 'Full Stack Dev',
+      year: '2022',
+    },
+    shortDescription: `A Single Page App (SPA) that allows users to make simple calculations
+    and read a random math-related quote.`,
+    description: `Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and
+    read a random math-related quote.`,
+    image: {
+      imageUrl: './img/math-magicians.gif',
+      imageAlt: 'preview of Math Magicians project',
+    },
+    technologies: ['html', 'css', 'javaScript', 'React'],
+    liveUrl: 'https://m0rrighan.github.io/math-magicians/',
+    soureUrl: 'https://github.com/M0rrighan/math-magicians',
+  },
+  {
+    id: 3,
+    title: 'Totos - React',
+    details: {
+      client: 'Learning Project',
+      role: 'Full Stack Dev',
+      year: '2022',
+    },
+    shortDescription: `To Do List: allows the user to add tasks, edit and remove tasks,
+    clear all completed task`,
+    description: `To Do List: allows the user to add tasks, edit and remove tasks,
+    clear all completed task`,
+    image: {
+      imageUrl: './img/todos-react.gif',
+      imageAlt: 'preview of ToDos project',
+    },
+    technologies: ['html', 'css', 'javaScript', 'React'],
+    liveUrl: 'https://m0rrighan.github.io/to-do-react/',
+    soureUrl: 'https://github.com/M0rrighan/to-do-react/tree/react-routing',
+  },
+  {
+    id: 4,
     title: 'To Do List',
     details: {
       client: 'Learning Project',
@@ -23,85 +83,25 @@ const projects = [
     soureUrl: 'https://github.com/M0rrighan/To-do-list',
   },
   {
-    id: 2,
-    title: 'Multi-Post Stories',
+    id: 5,
+    title: 'LeaderBoard',
     details: {
-      client: 'Facebook',
+      client: 'Learning Project',
       role: 'Full Stack Dev',
-      year: '2015',
+      year: '2021',
     },
-    shortDescription: `Experimental content creation feature that allows users to add to an 
-    existing story over the course of a day without spamming their friends.`,
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-    unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, 
-    remaining essent, Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-    unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, 
-    remaining essent`,
+    shortDescription: `The leaderboard website displays scores submitted by you and by other players.
+    Preserves all data to external API servise.`,
+    description: `The leaderboard website displays scores submitted by different players.
+    It also allows you to submit your score. All data is preserved thanks to the external
+    Leaderboard API service.`,
     image: {
-      imageUrl: './img/snapshoot2.png',
-      imageAlt: 'project 2 preview image',
+      imageUrl: './img/leaderboard.gif',
+      imageAlt: 'preview of Leadwrboard project',
     },
-    technologies: ['html', 'css', 'javaScript'],
-    liveUrl: 'mpStoriesLive.html',
-    soureUrl: 'mpStories.html',
-  },
-  {
-    id: 3,
-    title: 'Facebook 360',
-    details: {
-      client: 'Facebook',
-      role: 'Full Stack Developer',
-      year: '2015',
-    },
-    shortDescription: `Exploring the future of media in Facebook's first Virtual Reality app; 
-    a place to discover and enjoy 360 photos and videos on Gear VR.`,
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-    unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, 
-    remaining essent, Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-    unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, 
-    remaining essent`,
-    image: {
-      imageUrl: './img/snapshoot3.png',
-      imageAlt: 'project 3 preview image',
-    },
-    technologies: ['html', 'css', 'javaScript'],
-    liveUrl: 'TonicLive.html',
-    soureUrl: 'Tonic.html',
-  },
-  {
-    id: 4,
-    title: 'Uber Navigation',
-    details: {
-      client: 'Uber',
-      role: 'Lead Developer',
-      year: '2018',
-    },
-    shortDescription: `A smart assistant to make driving more safe, efficient, 
-    and fun by unlocking your most expensive computer: your car.`,
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-    unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, 
-    remaining essent, Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
-    unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, 
-    remaining essent`,
-    image: {
-      imageUrl: './img/snapshoot4.png',
-      imageAlt: 'project 4 preview image',
-    },
-    technologies: ['html', 'css', 'javaScript'],
-    liveUrl: 'mpStoriesLive.html',
-    soureUrl: 'mpStories.html',
+    technologies: ['html', 'css', 'javaScript', 'WEBPACK'],
+    liveUrl: 'https://m0rrighan.github.io/Leaderboard/',
+    soureUrl: 'https://github.com/M0rrighan/Leaderboard',
   },
 ];
 
@@ -169,11 +169,11 @@ function createModal(project) {
               ${tech}</li>`).join('')}                
               </ul>
               <div class="df action gap12">
-                <a href="${project.liveUrl}" class="df gap12 btn action_btn enabled">
+                <a href="${project.liveUrl}" target="_blank" class="df gap12 btn action_btn enabled">
                 See Live
                 <img src="icons/live.svg" alt="live logo"/>
                 </a>
-                <a href="${project.soureUrl}" class="df gap12 btn action_btn enabled">
+                <a href="${project.soureUrl}" target="_blank" class="df gap12 btn action_btn enabled">
                 See Source
                 <img src="icons/githubSource.svg" alt="github logo icon"/>
                 </a>
